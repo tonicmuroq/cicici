@@ -21,6 +21,7 @@
 		C225A4501846EBC90027F561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C225A4321846EBC90027F561 /* UIKit.framework */; };
 		C225A4581846EBC90027F561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C225A4561846EBC90027F561 /* InfoPlist.strings */; };
 		C225A45A1846EBC90027F561 /* ciciciTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C225A4591846EBC90027F561 /* ciciciTests.m */; };
+		C225A46518471A3E0027F561 /* CCSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = C225A46418471A3E0027F561 /* CCSelector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C225A4551846EBC90027F561 /* ciciciTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ciciciTests-Info.plist"; sourceTree = "<group>"; };
 		C225A4571846EBC90027F561 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C225A4591846EBC90027F561 /* ciciciTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ciciciTests.m; sourceTree = "<group>"; };
+		C225A46318471A3E0027F561 /* CCSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSelector.h; sourceTree = "<group>"; };
+		C225A46418471A3E0027F561 /* CCSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSelector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				C225A4341846EBC90027F561 /* cicici */,
+				C225A4351846EBC90027F561 /* Supporting Files */,
 				C225A4531846EBC90027F561 /* ciciciTests */,
 				C225A42D1846EBC90027F561 /* Frameworks */,
 				C225A42C1846EBC90027F561 /* Products */,
@@ -118,7 +122,8 @@
 				C225A4431846EBC90027F561 /* CCViewController.h */,
 				C225A4441846EBC90027F561 /* CCViewController.m */,
 				C225A4461846EBC90027F561 /* Images.xcassets */,
-				C225A4351846EBC90027F561 /* Supporting Files */,
+				C225A46318471A3E0027F561 /* CCSelector.h */,
+				C225A46418471A3E0027F561 /* CCSelector.m */,
 			);
 			path = cicici;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				C225A43C1846EBC90027F561 /* cicici-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = cicici;
 			sourceTree = "<group>";
 		};
 		C225A4531846EBC90027F561 /* ciciciTests */ = {
@@ -252,6 +258,7 @@
 			files = (
 				C225A43F1846EBC90027F561 /* CCAppDelegate.m in Sources */,
 				C225A43B1846EBC90027F561 /* main.m in Sources */,
+				C225A46518471A3E0027F561 /* CCSelector.m in Sources */,
 				C225A4451846EBC90027F561 /* CCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +468,7 @@
 				C225A45F1846EBC90027F561 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C225A4601846EBC90027F561 /* Build configuration list for PBXNativeTarget "ciciciTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +477,7 @@
 				C225A4621846EBC90027F561 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
