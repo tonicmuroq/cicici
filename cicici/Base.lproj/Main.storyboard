@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller - 点我来听次次次-->
+        <!--Listen View Controller - 点我来听次次次-->
         <scene sceneID="VPa-wX-GIS">
             <objects>
-                <viewController id="9tA-kh-a2z" sceneMemberID="viewController">
+                <viewController id="9tA-kh-a2z" customClass="CCListenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4cW-E4-frA"/>
                         <viewControllerLayoutGuide type="bottom" id="uGG-30-kY6"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="-475" y="-558"/>
         </scene>
-        <!--View Controller - 点我来录次次次-->
+        <!--Record View Controller - 点我来录次次次-->
         <scene sceneID="Mfe-6a-3p2">
             <objects>
-                <viewController id="9mK-ef-qQ9" sceneMemberID="viewController">
+                <viewController id="9mK-ef-qQ9" customClass="CCRecordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K21-RO-nJU"/>
                         <viewControllerLayoutGuide type="bottom" id="YBc-l8-HqB"/>

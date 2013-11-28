@@ -14,7 +14,7 @@
 		C225A43B1846EBC90027F561 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C225A43A1846EBC90027F561 /* main.m */; };
 		C225A43F1846EBC90027F561 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C225A43E1846EBC90027F561 /* CCAppDelegate.m */; };
 		C225A4421846EBC90027F561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C225A4401846EBC90027F561 /* Main.storyboard */; };
-		C225A4451846EBC90027F561 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C225A4441846EBC90027F561 /* CCViewController.m */; };
+		C225A4451846EBC90027F561 /* CCRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C225A4441846EBC90027F561 /* CCRecordViewController.m */; };
 		C225A4471846EBC90027F561 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C225A4461846EBC90027F561 /* Images.xcassets */; };
 		C225A44E1846EBC90027F561 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C225A44D1846EBC90027F561 /* XCTest.framework */; };
 		C225A44F1846EBC90027F561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C225A42E1846EBC90027F561 /* Foundation.framework */; };
@@ -22,6 +22,7 @@
 		C225A4581846EBC90027F561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C225A4561846EBC90027F561 /* InfoPlist.strings */; };
 		C225A45A1846EBC90027F561 /* ciciciTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C225A4591846EBC90027F561 /* ciciciTests.m */; };
 		C225A46518471A3E0027F561 /* CCSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = C225A46418471A3E0027F561 /* CCSelector.m */; };
+		C225A46818472D810027F561 /* CCListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C225A46718472D810027F561 /* CCListenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,8 @@
 		C225A43D1846EBC90027F561 /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
 		C225A43E1846EBC90027F561 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
 		C225A4411846EBC90027F561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C225A4431846EBC90027F561 /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
-		C225A4441846EBC90027F561 /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		C225A4431846EBC90027F561 /* CCRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCRecordViewController.h; sourceTree = "<group>"; };
+		C225A4441846EBC90027F561 /* CCRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCRecordViewController.m; sourceTree = "<group>"; };
 		C225A4461846EBC90027F561 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C225A44C1846EBC90027F561 /* ciciciTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ciciciTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C225A44D1846EBC90027F561 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,6 +57,8 @@
 		C225A4591846EBC90027F561 /* ciciciTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ciciciTests.m; sourceTree = "<group>"; };
 		C225A46318471A3E0027F561 /* CCSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSelector.h; sourceTree = "<group>"; };
 		C225A46418471A3E0027F561 /* CCSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSelector.m; sourceTree = "<group>"; };
+		C225A46618472D810027F561 /* CCListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCListenViewController.h; sourceTree = "<group>"; };
+		C225A46718472D810027F561 /* CCListenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCListenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +122,10 @@
 				C225A43D1846EBC90027F561 /* CCAppDelegate.h */,
 				C225A43E1846EBC90027F561 /* CCAppDelegate.m */,
 				C225A4401846EBC90027F561 /* Main.storyboard */,
-				C225A4431846EBC90027F561 /* CCViewController.h */,
-				C225A4441846EBC90027F561 /* CCViewController.m */,
+				C225A4431846EBC90027F561 /* CCRecordViewController.h */,
+				C225A4441846EBC90027F561 /* CCRecordViewController.m */,
+				C225A46618472D810027F561 /* CCListenViewController.h */,
+				C225A46718472D810027F561 /* CCListenViewController.m */,
 				C225A4461846EBC90027F561 /* Images.xcassets */,
 				C225A46318471A3E0027F561 /* CCSelector.h */,
 				C225A46418471A3E0027F561 /* CCSelector.m */,
@@ -259,7 +264,8 @@
 				C225A43F1846EBC90027F561 /* CCAppDelegate.m in Sources */,
 				C225A43B1846EBC90027F561 /* main.m in Sources */,
 				C225A46518471A3E0027F561 /* CCSelector.m in Sources */,
-				C225A4451846EBC90027F561 /* CCViewController.m in Sources */,
+				C225A4451846EBC90027F561 /* CCRecordViewController.m in Sources */,
+				C225A46818472D810027F561 /* CCListenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

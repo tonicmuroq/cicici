@@ -6,13 +6,13 @@
 //  Copyright (c) 2013年 tonic. All rights reserved.
 //
 
-#import "CCViewController.h"
+#import "CCRecordViewController.h"
 
-@interface CCViewController ()
+@interface CCRecordViewController ()
 
 @end
 
-@implementation CCViewController
+@implementation CCRecordViewController
 
 - (void)viewDidLoad
 {
