@@ -126,9 +126,9 @@
 				C225A4441846EBC90027F561 /* CCRecordViewController.m */,
 				C225A46618472D810027F561 /* CCListenViewController.h */,
 				C225A46718472D810027F561 /* CCListenViewController.m */,
-				C225A4461846EBC90027F561 /* Images.xcassets */,
 				C225A46318471A3E0027F561 /* CCSelector.h */,
 				C225A46418471A3E0027F561 /* CCSelector.m */,
+				C225A4461846EBC90027F561 /* Images.xcassets */,
 			);
 			path = cicici;
 			sourceTree = "<group>";

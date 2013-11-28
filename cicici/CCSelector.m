@@ -10,19 +10,27 @@
 
 @implementation CCSelector
 
-@synthesize playList = _playList;
-
 - (CCSelector *)initWithPlayList:(NSArray *)playList
 {
     self.playList = playList;
     return self;
 }
 
-- (void)printPlayList
+- (void)shuffle
 {
-    for (int i=0; i < self.playList.count; i++) {
-        NSLog(@"%@", [self.playList objectAtIndex:i]);
+    NSMutableArray *results = [NSMutableArray arrayWithArray:self.playList];
+    NSUInteger total = [results count];
+    while(--total > 0) {
+        int j = rand() % (total+1);
+        [results exchangeObjectAtIndex:total withObjectAtIndex:j];
     }
+    self.playList = [NSArray arrayWithArray:results];
+}
+
+- (NSString *)chooseOne
+{
+    [self shuffle];
+    return [self.playList firstObject];
 }
 
 + (CCSelector *)withPlayList:(NSArray *)playList

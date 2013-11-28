@@ -12,7 +12,7 @@
 
 @property(nonatomic) NSArray *playList;
 
-- (void)printPlayList;
+- (NSString *)chooseOne;
 + (CCSelector *)withPlayList:(NSArray *)playList;
 
 @end

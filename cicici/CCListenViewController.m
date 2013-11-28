@@ -7,8 +7,11 @@
 //
 
 #import "CCListenViewController.h"
+#import "CCSelector.h"
 
 @interface CCListenViewController()
+
+@property NSArray *playList;
 
 @end
 
@@ -18,6 +21,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.playList = @[@"name1", @"name2", @"name3"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,7 +47,8 @@
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     if (motion == UIEventSubtypeMotionShake) {
-        NSLog(@"检测到晃动");
+        CCSelector *selector = [CCSelector withPlayList:self.playList];
+        NSLog(@"%@", [selector chooseOne]);
     }
 }
 
