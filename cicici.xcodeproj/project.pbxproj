@@ -117,6 +117,7 @@
 		C2823D7C1848662500C52133 /* DOUSimpleHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUSimpleHTTPRequest.m; sourceTree = "<group>"; };
 		C2823D7D1848662500C52133 /* NSData+DOUMappedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DOUMappedFile.h"; sourceTree = "<group>"; };
 		C2823D7E1848662500C52133 /* NSData+DOUMappedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DOUMappedFile.m"; sourceTree = "<group>"; };
+		C2823D911848790A00C52133 /* SongLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongLib.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +188,7 @@
 				C225A46718472D810027F561 /* CCListenViewController.m */,
 				C225A46318471A3E0027F561 /* CCSelector.h */,
 				C225A46418471A3E0027F561 /* CCSelector.m */,
+				C2823D911848790A00C52133 /* SongLib.h */,
 				C225A4461846EBC90027F561 /* Images.xcassets */,
 			);
 			path = cicici;

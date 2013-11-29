@@ -8,34 +8,40 @@
 
 #import "CCSelector.h"
 
+static CCSelector *_selector;
+
 @implementation CCSelector
 
 - (CCSelector *)initWithPlayList:(NSArray *)playList
 {
-    self.playList = playList;
+    _playList = playList;
     return self;
 }
 
 - (void)shuffle
 {
-    NSMutableArray *results = [NSMutableArray arrayWithArray:self.playList];
+    NSMutableArray *results = [NSMutableArray arrayWithArray:_playList];
     NSUInteger total = [results count];
     while(--total > 0) {
         int j = rand() % (total+1);
         [results exchangeObjectAtIndex:total withObjectAtIndex:j];
     }
-    self.playList = [NSArray arrayWithArray:results];
+    _playList = [NSArray arrayWithArray:results];
 }
 
-- (NSString *)chooseOne
+- (id)chooseOne
 {
     [self shuffle];
-    return [self.playList firstObject];
+    return [_playList firstObject];
 }
 
 + (CCSelector *)withPlayList:(NSArray *)playList
 {
-    return [[CCSelector alloc] initWithPlayList:playList];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _selector = [[CCSelector alloc] init];
+    });
+    return [_selector initWithPlayList:playList];
 }
 
 @end
