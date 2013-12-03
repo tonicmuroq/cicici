@@ -41,6 +41,7 @@
 		C2823D8E1848662600C52133 /* DOUEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2823D7A1848662500C52133 /* DOUEAGLView.m */; };
 		C2823D8F1848662600C52133 /* DOUSimpleHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2823D7C1848662500C52133 /* DOUSimpleHTTPRequest.m */; };
 		C2823D901848662600C52133 /* NSData+DOUMappedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C2823D7E1848662500C52133 /* NSData+DOUMappedFile.m */; };
+		C2E785F2184DAB6D00ACFB68 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E785F1184DAB6D00ACFB68 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		C2823D7D1848662500C52133 /* NSData+DOUMappedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DOUMappedFile.h"; sourceTree = "<group>"; };
 		C2823D7E1848662500C52133 /* NSData+DOUMappedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DOUMappedFile.m"; sourceTree = "<group>"; };
 		C2823D911848790A00C52133 /* SongLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongLib.h; sourceTree = "<group>"; };
+		C2E785F1184DAB6D00ACFB68 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E785F2184DAB6D00ACFB68 /* AVFoundation.framework in Frameworks */,
 				C225A44E1846EBC90027F561 /* XCTest.framework in Frameworks */,
 				C225A4501846EBC90027F561 /* UIKit.framework in Frameworks */,
 				C225A44F1846EBC90027F561 /* Foundation.framework in Frameworks */,
@@ -167,6 +170,7 @@
 		C225A42D1846EBC90027F561 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2E785F1184DAB6D00ACFB68 /* AVFoundation.framework */,
 				C225A42E1846EBC90027F561 /* Foundation.framework */,
 				C225A4301846EBC90027F561 /* CoreGraphics.framework */,
 				C225A4321846EBC90027F561 /* UIKit.framework */,

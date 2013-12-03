@@ -8,7 +8,10 @@
 
 #import "CCRecordViewController.h"
 
-@interface CCRecordViewController ()
+@interface CCRecordViewController () {
+    AVAudioRecorder *recorder;
+    AVAudioPlayer *player;
+}
 
 @end
 
