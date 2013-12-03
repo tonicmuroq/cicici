@@ -14,7 +14,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *assHole;
+@property (weak, nonatomic) IBOutlet UISlider *volumeSlider;
 
 - (IBAction)recordClick:(id)sender;
 - (IBAction)playButtonClick:(id)sender;
+- (IBAction)volumeChanged:(id)sender;
 @end

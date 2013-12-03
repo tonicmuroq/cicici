@@ -82,7 +82,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     CCSelector *selector = [CCSelector withPlayList:_tracks];
     Track *track = [selector chooseOne];
     NSString *title = [NSString stringWithFormat:@"%@ - %@", track.artist, track.title];
-    [_TitleLabel setText:title];
+    [_titleLabel setText:title];
     
     _streamer = [DOUAudioStreamer streamerWithAudioFile:track];
     [_streamer addObserver:self forKeyPath:@"status"
@@ -112,10 +112,10 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 - (void)_timerAction:(id)timer
 {
     if ([_streamer duration] == 0.0) {
-        [_ProgressSlider setValue:0.0f
+        [_progressSlider setValue:0.0f
                              animated:NO];
     } else {
-        [_ProgressSlider setValue:[_streamer currentTime] / [_streamer duration]
+        [_progressSlider setValue:[_streamer currentTime] / [_streamer duration]
                              animated:YES];
     }
 }
@@ -127,7 +127,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 
 - (void)_updateBufferingStatus
 {
-    [_RatioLabel setText:[NSString stringWithFormat:@"%.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", (double)[_streamer receivedLength] / 1024 / 1024, (double)[_streamer expectedLength] / 1024 / 1024, [_streamer bufferingRatio] * 100.0, (double)[_streamer downloadSpeed] / 1024 / 1024]];
+    [_ratioLabel setText:[NSString stringWithFormat:@"%.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", (double)[_streamer receivedLength] / 1024 / 1024, (double)[_streamer expectedLength] / 1024 / 1024, [_streamer bufferingRatio] * 100.0, (double)[_streamer downloadSpeed] / 1024 / 1024]];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
@@ -168,7 +168,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
                                    selector:@selector(_timerAction:)
                                    userInfo:nil
                                     repeats:YES];
-    [_VolumeSlider setValue:[DOUAudioStreamer volume]];
+    [_volumeSlider setValue:[DOUAudioStreamer volume]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -204,12 +204,12 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 
 - (IBAction)actionSliderVolume:(id)sender
 {
-    [DOUAudioStreamer setVolume:[_VolumeSlider value]];
+    [DOUAudioStreamer setVolume:[_volumeSlider value]];
 }
 
 - (IBAction)actionSliderProgress:(id)sender
 {
-    [_streamer setCurrentTime:[_streamer duration] * [_ProgressSlider value]];
+    [_streamer setCurrentTime:[_streamer duration] * [_progressSlider value]];
 }
 
 - (IBAction)stopButtonPressed:(id)sender

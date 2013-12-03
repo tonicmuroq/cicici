@@ -10,10 +10,10 @@
 
 @interface CCListenViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *TitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *RatioLabel;
-@property (weak, nonatomic) IBOutlet UISlider *VolumeSlider;
-@property (weak, nonatomic) IBOutlet UISlider *ProgressSlider;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ratioLabel;
+@property (weak, nonatomic) IBOutlet UISlider *volumeSlider;
+@property (weak, nonatomic) IBOutlet UISlider *progressSlider;
 
 - (IBAction)actionSliderVolume:(id)sender;
 - (IBAction)actionSliderProgress:(id)sender;

@@ -135,6 +135,17 @@
                                     <action selector="playButtonClick:" destination="9mK-ef-qQ9" eventType="touchDown" id="d6B-B3-OTs"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7f6-Z5-Qpn">
+                                <rect key="frame" x="18" y="425" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="volumeChanged:" destination="9mK-ef-qQ9" eventType="valueChanged" id="Ba8-ZV-v1C"/>
+                                </connections>
+                            </slider>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Qdt-91-VPd">
+                                <rect key="frame" x="150" y="296" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -142,9 +153,11 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-18"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="assHole" destination="Qdt-91-VPd" id="7bd-Vx-ExV"/>
                         <outlet property="infoLabel" destination="IsM-ux-iFB" id="xVx-QT-2Qo"/>
                         <outlet property="playButton" destination="8nM-S5-t3M" id="ueI-N3-ZAt"/>
                         <outlet property="recordButton" destination="zTb-ac-iSJ" id="GSB-uS-meI"/>
+                        <outlet property="volumeSlider" destination="7f6-Z5-Qpn" id="znq-wu-yNK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sSF-zr-Xmm" userLabel="First Responder" sceneMemberID="firstResponder"/>

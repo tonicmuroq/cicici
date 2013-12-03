@@ -7,6 +7,7 @@
 //
 
 #import "CCRecordViewController.h"
+#import "SongLib.h"
 
 @interface CCRecordViewController () {
     AVAudioRecorder *recorder;
@@ -21,10 +22,12 @@
 {
     [super viewDidLoad];
     
+    _assHole.hidesWhenStopped = YES;
+    
     // Set the audio file
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                               @"MyAudioMemo.m4a",
+                               @"cicici.m4a",
                                nil];
     NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
     
@@ -56,14 +59,17 @@
 
 - (IBAction)recordClick:(id)sender
 {
+    AVAudioSession *session = [AVAudioSession sharedInstance];
     if (!recorder.recording) {
-        AVAudioSession *session = [AVAudioSession sharedInstance];
         [session setActive:YES error:nil];
         [recorder record];
+        [_assHole startAnimating];
         [_recordButton setTitle:@"停止" forState:UIControlStateNormal];
         [_infoLabel setText:@"在录了哈不要急"];
     } else {
-        [recorder pause];
+        [session setActive:NO error:nil];
+        [recorder stop];
+        [_assHole stopAnimating];
         [_recordButton setTitle:@"录音" forState:UIControlStateNormal];
         [_infoLabel setText:@"录完了诶"];
     }
@@ -71,20 +77,24 @@
 
 - (IBAction)playButtonClick:(id)sender
 {
-    NSLog(@"%@", recorder.url);
     if (!recorder.recording) {
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:recorder.url error:nil];
         [player setDelegate:self];
         [player play];
+    } else {
+        [_infoLabel setText:@"人家还在录呢别瞎戳"];
     }
 }
 
-- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
-{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Done"
-                                                    message: @"Finish playing the recording!"
+- (IBAction)volumeChanged:(id)sender {
+    [player setVolume:[_volumeSlider value]];
+}
+
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"听够了没有"
+                                                    message: @"次次次好玩不"
                                                    delegate: nil
-                                          cancelButtonTitle:@"OK"
+                                          cancelButtonTitle:@"好玩!"
                                           otherButtonTitles:nil];
     [alert show];
 }
