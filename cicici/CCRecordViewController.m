@@ -7,7 +7,6 @@
 //
 
 #import "CCRecordViewController.h"
-#import "SongLib.h"
 
 @interface CCRecordViewController () {
     AVAudioRecorder *recorder;
