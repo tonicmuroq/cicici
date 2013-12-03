@@ -190,6 +190,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [_streamer stop];
     [self resignFirstResponder];
     [super viewWillDisappear:animated];
 }
@@ -215,4 +216,5 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 {
     [_streamer stop];
 }
+
 @end
