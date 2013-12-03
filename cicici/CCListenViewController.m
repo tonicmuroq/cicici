@@ -53,7 +53,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 {
     static NSArray *tracks = nil;
     static dispatch_once_t onceToken;
-    NSArray *songs = @[PINLV, YANWO];
+    NSArray *songs = @[OLD_YELLOW_BRICKS, DIPLOMATS_SON, ARMY_DREAMERS, CHANCES, UNKNOWN];
     dispatch_once(&onceToken, ^{
         NSMutableArray *allTracks = [NSMutableArray array];
         for (NSString *song in songs) {
@@ -177,16 +177,19 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     // Dispose of any resources that can be recreated.
 }
 
--(BOOL)canBecomeFirstResponder {
+-(BOOL)canBecomeFirstResponder
+{
     return YES;
 }
 
--(void)viewDidAppear:(BOOL)animated {
+-(void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
     [self resignFirstResponder];
     [super viewWillDisappear:animated];
 }
@@ -198,11 +201,18 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     }
 }
 
-- (IBAction)actionSliderVolume:(id)sender {
+- (IBAction)actionSliderVolume:(id)sender
+{
     [DOUAudioStreamer setVolume:[_VolumeSlider value]];
 }
 
-- (IBAction)actionSliderProgress:(id)sender {
+- (IBAction)actionSliderProgress:(id)sender
+{
     [_streamer setCurrentTime:[_streamer duration] * [_ProgressSlider value]];
+}
+
+- (IBAction)stopButtonPressed:(id)sender
+{
+    [_streamer stop];
 }
 @end

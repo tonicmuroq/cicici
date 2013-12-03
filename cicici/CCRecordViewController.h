@@ -11,4 +11,10 @@
 
 @interface CCRecordViewController : UIViewController<AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *recordButton;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
+- (IBAction)recordClick:(id)sender;
+- (IBAction)playButtonClick:(id)sender;
 @end

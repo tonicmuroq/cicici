@@ -17,5 +17,6 @@
 
 - (IBAction)actionSliderVolume:(id)sender;
 - (IBAction)actionSliderProgress:(id)sender;
+- (IBAction)stopButtonPressed:(id)sender;
 
 @end
